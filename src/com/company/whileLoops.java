@@ -63,7 +63,7 @@ public class whileLoops {
         String return_line = "Max value is: " + max_value + "\nMin value is: " + min_value;
         return return_line;
     }
-    public static String gradePoint(){
+    public static double gradePoint(){
         double temp = 0;
         double grade_point = 0;
         System.out.println("Enter seven letter grades (A, B, C, D, or F)");
@@ -93,7 +93,7 @@ public class whileLoops {
         grade_point = grade_point / 7;
         temp = ((int)((grade_point * 100) + 0.5));
         temp = temp / 100;
-        return "GPA = " + temp;
+        return temp;
     }
     public static void main(String[] args){
 
@@ -111,7 +111,7 @@ public class whileLoops {
 
         System.out.println(findMinAndMax());
 
-        System.out.println(gradePoint());
+        System.out.println("GPA = " + gradePoint());
 
     }
 }
