@@ -2,12 +2,12 @@ package com.company;
 
 import java.util.Scanner;
 
-public class whileLoops {
+public class WhileLoops {
     static Scanner scanner = new Scanner(System.in);
     public static String fromHereToThere(int a, int b){
         String temp = "";
         if (a > b){
-            return "Invalid Input";
+            return "Invalid input";
         }
         else {
             while (a < (b + 1)){
@@ -26,14 +26,14 @@ public class whileLoops {
             }
             x ++;
         }
-        return temp;
+        return "The factors of " + y + " are: " + temp;
     }
     public static String countPosAndNeg(){
         int value = 1;
         int pos = 0;
         int neg = 0;
         while (value != 0){
-            System.out.println("Enter a positive or negative number or 0 to quit: ");
+            //System.out.println("Enter a positive or negative number or 0 to quit: ");
             value = scanner.nextInt();
             if (value > 0){
                 pos ++;
@@ -42,7 +42,7 @@ public class whileLoops {
                 neg ++;
             }
         }
-        return "There were " + pos + " positive and " + neg + " numbers.";
+        return "There were " + pos + " positive and " + neg + " negative numbers.";
     }
     public static String findMinAndMax(){
         int temp = 0;
