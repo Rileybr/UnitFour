@@ -91,12 +91,12 @@ public class WhileLoops {
             temp ++;
         }
         grade_point = grade_point / 7;
-        temp = ((int)((grade_point * 100) + 0.5));
+        temp = (int)((grade_point * 100) + 0.5);
         temp = temp / 100;
         return temp;
     }
     public static void main(String[] args){
-
+        /*
         System.out.println("Enter start number:");
         int a = scanner.nextInt();
         System.out.println("Enter end number:");
@@ -110,7 +110,7 @@ public class WhileLoops {
         System.out.println(countPosAndNeg());
 
         System.out.println(findMinAndMax());
-
+        */
         System.out.println("GPA = " + gradePoint());
 
     }
