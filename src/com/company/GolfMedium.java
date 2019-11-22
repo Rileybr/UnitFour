@@ -42,21 +42,26 @@ public class GolfMedium {
 
         String output = "";
         String temp_output = "";
+        int a_num_holes = 0;
+        int b_num_holes = 0;
         int a_score = 0;
         int b_score = 0;
         int a_score_total = 0;
         int b_score_total = 0;
-        int temp_1 = 0;
+        int temp_1;
         int temp_2= 0;
+        int par;
+        int player_a_score;
+        int player_b_score;
 
         for (int temp = 0; temp < 9; temp++){
             String line = scanner.nextLine();
             String first_temp = line.substring(0, 1);
             String second_temp = line.substring(2,3);
             String third_temp = line.substring(4,5);
-            int par = Integer.parseInt(first_temp);
-            int player_a_score = Integer.parseInt(second_temp);
-            int player_b_score = Integer.parseInt(third_temp);
+            par = Integer.parseInt(first_temp);
+            player_a_score = Integer.parseInt(second_temp);
+            player_b_score = Integer.parseInt(third_temp);
 
             a_score_total += player_a_score;
             b_score_total += player_b_score;
@@ -70,6 +75,12 @@ public class GolfMedium {
                 temp_output = (temp + 1) + " " + temp_2;
             }
 
+            if (player_a_score < player_b_score){
+                a_num_holes ++;
+            }
+            else if (player_a_score > player_b_score){
+                b_num_holes ++;
+            }
         }
 
 
@@ -92,14 +103,14 @@ public class GolfMedium {
             output += a_score_total + " " + b_score_total+"\n";
             output += a_par;
             output += b_par;
-            output += b_score_total - a_score_total +"\n";
+            output += a_num_holes +"\n";
             output += temp_output;
         }
         else {
             output += b_score_total + " " + a_score_total+"\n";
             output += b_par;
             output += a_par;
-            output += a_score_total - b_score_total +"\n";
+            output += b_num_holes +"\n";
             output += temp_output;
         }
         return output;
